@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "768790b2-c562-4b60-8fee-08e7090acc63",
+		"name": "Blazedemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "launch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://blazedemo.com/",
+					"protocol": "http",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find Flights",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://blazedemo.com/reserve.php?fromPort=Paris&toPort=Buenos Aires",
+					"protocol": "https",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"reserve.php"
+					],
+					"query": [
+						{
+							"key": "fromPort",
+							"value": "Paris"
+						},
+						{
+							"key": "toPort",
+							"value": "Buenos Aires"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "choose flight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "flight=43&price=472.56&airline=Virgin+America&fromPort=Paris&toPort=Buenos+Aires"
+				},
+				"url": {
+					"raw": "https://blazedemo.com/purchase.php",
+					"protocol": "https",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"purchase.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "_token=&inputName=&address=&city=&state=&zipCode=&cardType=visa&creditCardNumber=&creditCardMonth=11&creditCardYear=2017&nameOnCard="
+				},
+				"url": {
+					"raw": "https://blazedemo.com/confirmation.php",
+					"protocol": "https",
+					"host": [
+						"blazedemo",
+						"com"
+					],
+					"path": [
+						"confirmation.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
